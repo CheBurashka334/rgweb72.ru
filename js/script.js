@@ -17,6 +17,12 @@ $(document).ready(function(){
 		}
 	});
 	
+	// accordeon
+	$('.accordeon-header').click(function(){
+		$(this).parents('.accordeon').toggleClass('open');
+		$(this).parents('.accordeon').find('.accordeon-content').slideToggle();
+	});
+	
 	// jcarousel
 	// http://sorgalla.com/jcarousel/docs/
 	$('.carousel').jcarousel({

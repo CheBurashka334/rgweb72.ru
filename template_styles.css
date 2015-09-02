@@ -512,7 +512,7 @@ ul {
 
 /* line 42, scss/components/_global.scss */
 a {
-  color: #667ce1;
+  color: #2f7eb3;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -709,14 +709,33 @@ video.responsive-video {
   height: auto;
 }
 
-/* line 208, scss/components/_global.scss */
+/* line 206, scss/components/_global.scss */
+.video-box {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+/* line 212, scss/components/_global.scss */
+.video-box iframe,
+.video-box object,
+.video-box embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 224, scss/components/_global.scss */
 .parallax-container {
   position: relative;
   overflow: hidden;
   height: 500px;
 }
 
-/* line 214, scss/components/_global.scss */
+/* line 230, scss/components/_global.scss */
 .parallax {
   position: absolute;
   top: 0;
@@ -725,7 +744,7 @@ video.responsive-video {
   bottom: 0;
   z-index: -1;
 }
-/* line 222, scss/components/_global.scss */
+/* line 238, scss/components/_global.scss */
 .parallax img {
   display: none;
   position: absolute;
@@ -740,12 +759,12 @@ video.responsive-video {
           transform: translateX(-50%);
 }
 
-/* line 236, scss/components/_global.scss */
+/* line 252, scss/components/_global.scss */
 .pin-top, .pin-bottom {
   position: relative;
 }
 
-/* line 239, scss/components/_global.scss */
+/* line 255, scss/components/_global.scss */
 .pinned {
   position: fixed !important;
 }
@@ -753,12 +772,12 @@ video.responsive-video {
 /*********************
   Transition Classes
 **********************/
-/* line 247, scss/components/_global.scss */
+/* line 263, scss/components/_global.scss */
 ul.staggered-list li {
   opacity: 0;
 }
 
-/* line 251, scss/components/_global.scss */
+/* line 267, scss/components/_global.scss */
 .fade-in {
   opacity: 0;
   -webkit-transform-origin: 0 50%;
@@ -766,7 +785,7 @@ ul.staggered-list li {
           transform-origin: 0 50%;
 }
 
-/* line 258, scss/components/_global.scss */
+/* line 274, scss/components/_global.scss */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -774,11 +793,11 @@ ul.staggered-list li {
   height: 0;
   overflow: hidden;
 }
-/* line 264, scss/components/_global.scss */
+/* line 280, scss/components/_global.scss */
 .video-container.no-controls {
   padding-top: 0;
 }
-/* line 268, scss/components/_global.scss */
+/* line 284, scss/components/_global.scss */
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
@@ -790,37 +809,37 @@ ul.staggered-list li {
 /*******************
   Utility Classes
 *******************/
-/* line 282, scss/components/_global.scss */
+/* line 298, scss/components/_global.scss */
 .hide {
   display: none !important;
 }
 
-/* line 287, scss/components/_global.scss */
+/* line 303, scss/components/_global.scss */
 .left-align {
   text-align: left;
 }
 
-/* line 290, scss/components/_global.scss */
+/* line 306, scss/components/_global.scss */
 .right-align {
   text-align: right;
 }
 
-/* line 293, scss/components/_global.scss */
+/* line 309, scss/components/_global.scss */
 .center, .center-align {
   text-align: center;
 }
 
-/* line 297, scss/components/_global.scss */
+/* line 313, scss/components/_global.scss */
 .left, .carousel .item {
   float: left !important;
 }
 
-/* line 300, scss/components/_global.scss */
+/* line 316, scss/components/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 305, scss/components/_global.scss */
+/* line 321, scss/components/_global.scss */
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -830,19 +849,19 @@ ul.staggered-list li {
   user-select: none;
 }
 
-/* line 314, scss/components/_global.scss */
+/* line 330, scss/components/_global.scss */
 .circle, .carousel .carousel-pagination .nav-item, .carousel .carousel-pagination .nav-link {
   border-radius: 50%;
 }
 
-/* line 318, scss/components/_global.scss */
+/* line 334, scss/components/_global.scss */
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 324, scss/components/_global.scss */
+/* line 340, scss/components/_global.scss */
 .truncate {
   display: block;
   white-space: nowrap;
@@ -850,12 +869,12 @@ ul.staggered-list li {
   text-overflow: ellipsis;
 }
 
-/* line 331, scss/components/_global.scss */
+/* line 347, scss/components/_global.scss */
 .no-padding {
   padding: 0 !important;
 }
 
-/* line 335, scss/components/_global.scss */
+/* line 351, scss/components/_global.scss */
 .triangle {
   position: absolute;
   width: 30px;
@@ -865,7 +884,7 @@ ul.staggered-list li {
   top: 0;
   right: 0;
 }
-/* line 343, scss/components/_global.scss */
+/* line 359, scss/components/_global.scss */
 .triangle:after {
   content: '';
   display: block;
@@ -881,103 +900,81 @@ ul.staggered-list li {
 
 /* line 2, scss/components/_buttons.scss */
 .btn, .btn-icon {
-  border: 1px solid;
-  border-radius: 25px;
   display: inline-block;
-  font-size: 17px;
-  height: 50px;
-  line-height: 45px;
-  padding-bottom: 5px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 2em;
+  height: 41px;
   outline: 0;
   vertical-align: middle;
+  border-radius: 3px;
+  border: 0;
+  border-bottom: 4px solid;
+  margin: 10px auto;
   -webkit-tap-highlight-color: transparent;
 }
-/* line 14, scss/components/_buttons.scss */
+/* line 16, scss/components/_buttons.scss */
 .btn.center, .btn-icon.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 22, scss/components/_buttons.scss */
-.btn {
-  width: 190px;
+/* line 24, scss/components/_buttons.scss */
+.btn,
+.btn:hover,
+.btn:active {
   text-decoration: none;
-  color: #c7213a;
-  border-color: #c7213a;
-  background-color: transparent;
+  color: #fff;
+  border-color: #14518b;
+  background-color: #3d8bd5;
   text-align: center;
   cursor: pointer;
 }
-/* line 30, scss/components/_buttons.scss */
-.btn:hover, .btn:active {
-  background-color: #c7213a;
-  color: #fff;
-}
 
-/* line 37, scss/components/_buttons.scss */
-.btn.primary {
-  background-color: #c7213a;
-  border-color: #c7213a;
-  color: #fff;
-}
-/* line 41, scss/components/_buttons.scss */
-.btn.primary:hover, .btn.primary:active {
-  background-color: #f33955;
-  border-color: #f33955;
-}
-
-/* line 48, scss/components/_buttons.scss */
-.btn-icon {
-  width: 3em;
-  background: transparent;
-  border-color: #0b4f9f;
-  padding: 0 15px;
-}
-/* line 53, scss/components/_buttons.scss */
-.btn-icon .icon {
-  width: 100%;
-  height: 100%;
-  fill: #0b4f9f;
-}
-/* line 58, scss/components/_buttons.scss */
-.btn-icon:hover, .btn-icon:active {
-  background: #0d4f9e;
-  border-color: #0d4f9e;
-}
-/* line 62, scss/components/_buttons.scss */
-.btn-icon:hover .icon, .btn-icon:active .icon {
-  fill: #fff;
-}
-/* line 66, scss/components/_buttons.scss */
-.btn-icon.small {
-  width: 38px;
-  height: 38px;
-  line-height: 38px;
-  border-color: #ededed;
-  padding: 0 10px;
-}
-/* line 73, scss/components/_buttons.scss */
-.btn-icon.default {
-  border: 0;
-  line-height: 1em;
-  height: 1em;
-  width: 1em;
-  padding: 0;
-}
-/* line 79, scss/components/_buttons.scss */
-.btn-icon.default .icon {
-  fill: #0d4f9e;
-}
-/* line 82, scss/components/_buttons.scss */
-.btn-icon.default:hover, .btn-icon.default:active {
-  background: transparent;
-}
-/* line 85, scss/components/_buttons.scss */
-.btn-icon.default:hover .icon, .btn-icon.default:active .icon {
-  fill: #0d4f9e;
-}
-
+/*.btn-icon {
+	width: 3em;
+	background: transparent;
+	border-color: $btn-icon-color;
+	padding: 0 15px;
+	.icon {
+		width: 100%;
+		height: 100%;
+		fill: $btn-icon-color;
+	}
+	&:hover,
+	&:active {
+		background: $btn-icon-bg;
+		border-color: $btn-icon-bg;
+		.icon {
+			fill: #fff;
+		}
+	}
+	&.small {
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+		border-color: #ededed;
+		padding: 0 $gutter;
+	}
+	&.default {
+		border: 0;
+		line-height: 1em;
+		height: 1em;
+		width: 1em;
+		padding: 0;
+		.icon {
+			fill: $btn-icon-bg;
+		}
+		&:hover,
+		&:active {
+			background: transparent;
+			.icon {
+				fill: $btn-icon-bg;
+			}	
+		}
+	}
+}*/
 /* line 1, scss/components/_grid.scss */
 .row {
   margin-left: auto;
@@ -1524,12 +1521,14 @@ p {
 }
 
 /* line 24, scss/components/_typography.scss */
-.light, .home-slider .item-text, .header .auth-menu .menu-link, .mobile-menu .menu-link, .search-box .search, .links-box.colored .item-link {
+.light, .btn,
+.btn:hover,
+.btn:active, .home-slider .item-text, .header .auth-menu .menu-link, .mobile-menu .menu-link, .search-box .search, .links-box.colored .item-link {
   font-weight: 300;
 }
 
 /* line 25, scss/components/_typography.scss */
-.thin, .home-slider .item-title, .card .item-title, .footer, .courses-box .item-text, .courses-box .item-title {
+.thin, .home-slider .item-title, .card .item-title, .accordeon .accordeon-header, .footer, .courses-box .item-text, .courses-box .item-title {
   font-weight: 100;
 }
 
@@ -1540,29 +1539,30 @@ p {
 }
 
 /* line 30, scss/components/_typography.scss */
-.x-big {
-  font-size: 26px;
+.x-big, .accordeon .accordeon-header {
+  font-size: 20px;
+  line-height: normal;
 }
 
-/* line 33, scss/components/_typography.scss */
+/* line 34, scss/components/_typography.scss */
 .xx-big, .courses-box .item-title {
   font-size: 30px;
   line-height: 2em;
 }
 
-/* line 37, scss/components/_typography.scss */
+/* line 38, scss/components/_typography.scss */
 .large {
   font-size: 40px;
 }
 
-/* line 40, scss/components/_typography.scss */
+/* line 41, scss/components/_typography.scss */
 .x-large {
   font-size: 50px;
   line-height: 1;
   margin: 30px 0 25px;
 }
 
-/* line 45, scss/components/_typography.scss */
+/* line 46, scss/components/_typography.scss */
 .page-title {
   margin: 15px 0;
   font-size: 24px;
@@ -1570,27 +1570,27 @@ p {
   color: #434343;
 }
 
-/* line 51, scss/components/_typography.scss */
+/* line 52, scss/components/_typography.scss */
 .block-title {
   font-size: 26px;
   line-height: 28px;
   margin: 30px auto;
 }
 @media only screen and (min-width: 601px) {
-  /* line 51, scss/components/_typography.scss */
+  /* line 52, scss/components/_typography.scss */
   .block-title {
     margin-top: 40px;
   }
 }
 
-/* line 59, scss/components/_typography.scss */
+/* line 60, scss/components/_typography.scss */
 .block-title-like-tab {
   font-size: 20px;
   line-height: 30px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 30px;
 }
-/* line 64, scss/components/_typography.scss */
+/* line 65, scss/components/_typography.scss */
 .block-title-like-tab .text {
   position: relative;
   display: inline-block;
@@ -1600,52 +1600,50 @@ p {
   z-index: 2;
 }
 @media only screen and (min-width: 993px) {
-  /* line 59, scss/components/_typography.scss */
+  /* line 60, scss/components/_typography.scss */
   .block-title-like-tab {
     margin-bottom: 40px;
   }
 }
 
-/* line 76, scss/components/_typography.scss */
+/* line 77, scss/components/_typography.scss */
 .light-text {
   color: #949494;
 }
 
-/* line 79, scss/components/_typography.scss */
+/* line 80, scss/components/_typography.scss */
 h2 {
   font-size: 26px;
   line-height: 28px;
   margin: 20px 0 30px;
 }
 
-/* line 84, scss/components/_typography.scss */
+/* line 85, scss/components/_typography.scss */
 .rouble {
   font-family: rouble;
 }
 
-/* line 88, scss/components/_typography.scss */
+/* line 89, scss/components/_typography.scss */
 ol:not(.nostyle) {
   margin: 10px 0 20px;
   padding: 0;
   list-style: none;
   counter-reset: item;
 }
-/* line 93, scss/components/_typography.scss */
+/* line 94, scss/components/_typography.scss */
 ol:not(.nostyle) li {
   margin: 10px 0;
   padding: 0;
 }
-/* line 96, scss/components/_typography.scss */
+/* line 97, scss/components/_typography.scss */
 ol:not(.nostyle) li:before {
   display: inline;
   counter-increment: item;
-  content: counter(item) ") ";
+  content: counter(item) ". ";
 }
-@media only screen and (min-width: 601px) {
-  /* line 93, scss/components/_typography.scss */
-  ol:not(.nostyle) li {
-    margin: 20px 0;
-  }
+/* line 103, scss/components/_typography.scss */
+ol:not(.nostyle).links-list {
+  color: #2f7eb3;
 }
 
 /* line 2, scss/components/_carousel.scss */
@@ -1838,6 +1836,62 @@ ol:not(.nostyle) li:before {
 /* line 22, scss/components/_card.scss */
 .card.role-3 .item-title {
   background: #2776ed;
+}
+
+/* line 2, scss/components/_accordeon.scss */
+.accordeon {
+  margin: 20px 0;
+  overflow: hidden;
+}
+/* line 5, scss/components/_accordeon.scss */
+.accordeon .accordeon-header {
+  padding: 20px 15px;
+  padding-right: 30px;
+  background: #ececec;
+  min-height: 100px;
+  z-index: 2;
+}
+/* line 13, scss/components/_accordeon.scss */
+.accordeon .accordeon-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #b9b9b9;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+}
+/* line 28, scss/components/_accordeon.scss */
+.accordeon .accordeon-content {
+  padding: 5px 15px 10px;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+}
+/* line 36, scss/components/_accordeon.scss */
+.accordeon.open .accordeon-header {
+  background: #dde7ff;
+}
+/* line 38, scss/components/_accordeon.scss */
+.accordeon.open .accordeon-header:after {
+  border-left-color: #667ce1;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/* line 44, scss/components/_accordeon.scss */
+.accordeon ol {
+  margin: 0;
+}
+/* line 46, scss/components/_accordeon.scss */
+.accordeon ol li {
+  margin: 20px 0 0;
 }
 
 /* line 2, scss/components/_header.scss */
