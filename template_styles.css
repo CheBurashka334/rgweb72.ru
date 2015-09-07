@@ -2092,30 +2092,31 @@ input[type="url"]:focus {
   line-height: 40px;
   text-align: center;
   vertical-align: middle;
+  padding: 0;
 }
-/* line 15, scss/components/_header.scss */
+/* line 16, scss/components/_header.scss */
 .header .btn-menu .icon {
-  width: 100%;
+  width: 30px;
   height: 100%;
   fill: #434343;
 }
-/* line 21, scss/components/_header.scss */
+/* line 22, scss/components/_header.scss */
 .header .auth-menu {
   position: absolute;
   top: 0;
   right: 0;
   font-size: 0;
 }
-/* line 27, scss/components/_header.scss */
+/* line 28, scss/components/_header.scss */
 .header .auth-menu .menu-item {
   display: inline-block;
   border-right: 1px solid #8e9ee4;
 }
-/* line 30, scss/components/_header.scss */
+/* line 31, scss/components/_header.scss */
 .header .auth-menu .menu-item:last-of-type {
   border-right: 0;
 }
-/* line 34, scss/components/_header.scss */
+/* line 35, scss/components/_header.scss */
 .header .auth-menu .menu-link {
   display: inline-block;
   padding: 0 20px;
